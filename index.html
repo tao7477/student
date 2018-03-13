@@ -1,16 +1,283 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <title>个人首页</title>
+      <title>个人网页</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <script src="jquery/jquery.min.js"></script>
+      <script src="jquery/jquery.cookie.js"></script>
+      <script src="jquery/jquery.appear.js"></script>
 	  <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="js/progress-bar.min.js"></script>
+      <link href="css/reset.css" rel="stylesheet">
+      <link href="css/font-awesome.min.css" rel="stylesheet">
 	  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	  <link href="css/reset.css" rel="stylesheet">
 	  <link href="main.css" rel="stylesheet">
    </head>
-<body>
-
+<body id="body" ondragstart="return false">
+<audio src="Music/回想.mp3" autoplay="autoplay" controls="controls" loop="loop" preload="auto"></audio>
+<section class="hidden-xs">
+    <ul class="slideshow">
+        <li>
+            <span>图片1</span>
+        </li>
+        <li>
+            <span>图片2</span>
+        </li>
+        <li>
+            <span>图片3</span>
+        </li>
+        <li>
+            <span>图片4</span>
+        </li>
+        <li>
+            <span>图片5</span>
+        </li>
+        <li>
+            <span>图片6</span>
+        </li>
+    </ul>
+</section>
+<header id="header" class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    个人资料
+                </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="fa fa-reorder fa-lg"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse bs-navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="first">
+                        <a href="#body">
+                            <i class="fa fa-home">
+                            </i>
+                            首页
+                        </a>
+                    </li>
+                    <li class="info-item">
+                        <a href="#bs-info">
+                            <i class="fa fa-id-card">
+                            </i>
+                            基本资料
+                        </a>
+                    </li>
+                    <li class="info-item">
+                        <a href="#bs-sk">
+                            <i class="fa fa-tasks">
+                            </i>
+                            基本技术
+                        </a>
+                    </li>
+                    <li class="info-item">
+                        <a href="#bs-st">
+                            <i class="fa fa-mortar-board">
+                            </i>
+                            学业情况
+                        </a>
+                    </li>
+                    <li class="info-item">
+                        <a href="#bs-ph">
+                            <i class="fa fa-phone">
+                            </i>
+                            联系方式
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</header>
+<div id="bodyer">
+    <div class="container">
+        <div class="row">
+            <div id="body-cl" class="col-md-8">
+                <div id="panel" class="well mybody alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    求职用页面
+                    <br>
+                    <br>
+                    大四狗一枚，初学者水平，有兴趣的可以联系我
+                    <br>
+                    如果大佬觉得做的很菜，有空可以带带我
+                    <br>
+                    现在还很简陋，但会渐渐完善起来
+                </div>
+                <div id="article-list">
+                    <div class="article well clearfix mybody2">
+                        <i class="fa fa-bookmark article-trick visible-md visible-lg"></i>
+                        <div class="data-article">
+                            <div class="title-article">
+                                <h1>
+                                    <span>个人资料</span>
+                                </h1>
+                            </div>
+                            <div class="list-atticle-container row">
+                                <ul class="list-article col-md-6">
+                                    <li class="list-article-item">
+                                        <label>姓名：</label>
+                                        <span class="list-item">陶志强</span>
+                                    </li>
+                                    <li class="list-article-item">
+                                        <label>性别：</label>
+                                        <span class="list-item">男</span>
+                                    </li>
+                                    <li class="list-article-item">
+                                        <label>年龄：</label>
+                                        <span class="list-item">23</span>
+                                    </li>
+                                    <li class="list-article-item">
+                                        <label>学历：</label>
+                                        <span class="list-item">本科</span>
+                                        <a href="http://www.njue.edu.cn/" target="_blank"><span class="label-primary">南京财经大学</span></a>
+                                    </li>
+                                    <li class="list-article-item">
+                                        <label>专业：</label>
+                                        <span class="list-item">电子商务</span>
+                                    </li>
+                                    <li class="list-article-item">
+                                        <label>所在地：</label>
+                                        <span class="list-item">南京</span>
+                                    </li>
+                                    <li class="list-article-item">
+                                        <label>求职意向：</label>
+                                        <span class="list-item">Web前端开发、Web前端实习</span>
+                                    </li>
+                                </ul>
+                                <div class="item-right">
+                                    <div class="img-top"></div>
+                                    <p class="img-bottom">
+                                         说实话没有什么设计天赋，网页也做的非常简陋，自学没有多久，技术也还需要提高，
+                                        如果有人看的上眼就好了。因为一直在学各种基础知识，前端的知识又比较零散，目前
+                                        只是学习了jQuery库和Bootstrap框架，其他还来不及学习，接下来准备学习vue框架。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article well clearfix mybody2">
+                        <div class="data-article">
+                            <div class="title-article">
+                                <h1>
+                                    <span>基本技能</span>
+                                </h1>
+                            </div>
+                            <div class="progress-box" >
+                                <h5>JavaScript
+                                    <span class="color-heading pull-right">65%</span>
+                                </h5>
+                                <div class="progress">
+                                    <div class="progress-bar" data-width="65"></div>
+                                </div>
+                            </div>
+                            <div class="progress-box">
+                                <h5>CSS
+                                    <span class="color-heading pull-right">80%</span>
+                                </h5>
+                                <div class="progress">
+                                    <div class="progress-bar" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="progress-box">
+                                <h5>HTML
+                                    <span class="color-heading pull-right">78%</span>
+                                </h5>
+                                <div class="progress">
+                                    <div class="progress-bar" data-width="78"></div>
+                                </div>
+                            </div>
+                            <div class="progress-box">
+                                <h5>jQuery
+                                    <span class="color-heading pull-right">80%</span>
+                                </h5>
+                                <div class="progress">
+                                    <div class="progress-bar" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="progress-box">
+                                <h5>Bootstrap
+                                    <span class="color-heading pull-right">80%</span>
+                                </h5>
+                                <div class="progress">
+                                    <div class="progress-bar" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article well clearfix mybody2">
+                        <div class="data-article">
+                            <div class="title-article">
+                                <h1>
+                                    <span>学业情况</span>
+                                </h1>
+                            </div>
+                            <table class="table table-hover table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>获奖/证书</th>
+                                    <th>等级/成绩</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2015/9</td><td>学习优秀奖学金</td><td>三等</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/5</td><td>学习优秀奖学金</td><td>一等</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/9</td><td>学习优秀奖学金</td><td>二等</td>
+                                </tr>
+                                <tr>
+                                    <td>2017/5</td><td>学习优秀奖学金</td><td>一等</td>
+                                </tr>
+                                <tr>
+                                    <td>2014/12</td><td>大学英语四级</td><td>466</td>
+                                </tr>
+                                <tr>
+                                    <td>2016/3</td><td>全国计算机等级二级</td><td>合格</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="article well clearfix mybody2">
+                        <div class="data-article">
+                            <div class="title-article">
+                                <h1>
+                                    <span>联系方式</span>
+                                </h1>
+                            </div>
+                            <div class="container container-lg">
+                                <div class="row">
+                                    <div class="col-md-3 phone">
+                                        <h2>手机</h2>
+                                        <p>17721516939</p>
+                                    </div>
+                                    <div class="col-md-3 phone">
+                                        <h2>QQ</h2>
+                                        <p>2102199868</p>
+                                    </div>
+                                    <div class="col-md-3 phone">
+                                        <h2>github</h2>
+                                        <p>https://github.com/tao7477</p>
+                                    </div>
+                                    <div class="col-md-3 phone">
+                                        <h2>微信</h2>
+                                        <p>qmjzcs72</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="body-cr" class="col-md-4"></div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
 </body>
 </html>
