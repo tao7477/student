@@ -281,19 +281,23 @@ audio{
     right: 20px;
 }
 
-.img-top{
-    background: url("img/bg-note-top.png") no-repeat left top;
-    height:38px;
-    width: 280px;
+.item-right .note{
+    padding-top: 38px;
+    margin-bottom: 10px;
+    background: url("img/bg-note-top.png") top center no-repeat;
+    width: 271px;
 }
 
-.img-bottom{
-    background: url("img/bg-note-middle.png") repeat-y left top;
-    width:280px;
-    padding:0 10px 0 10px;
-    word-wrap: break-word;
-    word-break: break-all;
+.note-container{
+    padding: 1px 20px 0;
+    text-indent: 2em;
+    background: url("img/bg-note-middle.png") top center repeat-y;
     overflow: hidden;
+}
+
+.note-bottom{
+    padding-bottom: 34px;
+    background: url("img/bg-note-bottom.png") bottom center no-repeat;
 }
 
 .progress-box h5{
