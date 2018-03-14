@@ -13,6 +13,7 @@ body{
   cursor: url("cur/mouse1.cur"), url("cur/mouse1.cur"), auto;
 }
 
+
 A {
   cursor: url("cur/mouse2.cur"), url("cur/mouse2.cur"), auto;
 }
@@ -193,7 +194,9 @@ audio{
 }
 
 .mybody2 {
-  .mybody;
+  border:none;
+  background-color: rgba(230,238,232,0.5);
+  .box-shadow(0 0 8px black);
 }
 
 .mybody2:hover {
@@ -204,6 +207,31 @@ audio{
   background-color: rgba(255,255,255,0.9);
   .box-shadow(0 0 50px black);
 }
+
+.transition-duration(@time){
+  -webkit-transition-duration: @time;
+  -moz-transition-duration: @time;
+  -o-transition-duration: @time;
+  transition-duration: @time;
+}
+
+.transition-timing-function(@attr){
+  -webkit-transition-timing-function: @attr;
+  -moz-transition-timing-function: @attr;
+  -o-transition-timing-function: @attr;
+  transition-timing-function: @attr;
+}
+
+.transform(@attr){
+  -webkit-transform: @attr;
+  -moz-transform: @attr;
+  -ms-transform: @attr;
+  -o-transform: @attr;
+  transform: @attr;
+}
+
+/*页面翻滚*/
+
 
 #article-list{
   margin-top: 20px;
@@ -281,7 +309,6 @@ audio{
   }
 }
 
-
 .item-right{
   top: -20px;
   right: 20px;
@@ -349,7 +376,32 @@ audio{
   }
 }
 
-/* 字体发光特效 */
+/*移动到顶部*/
+.toTop{
+  position: fixed;
+  bottom:20px;
+  right:20px;
+  height: 40px;
+  width: 40px;
+  .border-radius(50%);
+  border: 2px solid white;
+  background-color: rgba(10, 10, 0, 0.7);
+  top: auto;
+  display: block;
+  cursor: pointer;
+  z-index: 999;
+  color: white;
+  i{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    line-height:36px;
+  }
+}
+.toTop:hover{
+  color: #d9534f;
+  border: 2px solid #d9534f;
+}
 
 
 /*主题内容end*/

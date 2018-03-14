@@ -10,9 +10,11 @@
 	  <script src="bootstrap/js/bootstrap.min.js"></script>
       <script src="js/progress-bar.min.js"></script>
       <script src="js/main.js"></script>
-      <link href="css/reset.css" rel="stylesheet">
+
+      <link href="css/normalize.css" rel="stylesheet">
       <link href="css/font-awesome.min.css" rel="stylesheet">
 	  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="dist/aos.css" />
 	  <link href="myblog.min.css" rel="stylesheet">
    </head>
 <body id="body" ondragstart="return false">
@@ -159,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="bs-sk" class="article well clearfix mybody2">
+                    <div id="bs-sk" class="article well clearfix mybody2" aos="flip-up">
                         <div class="data-article">
                             <div class="title-article">
                                 <h1>
@@ -208,7 +210,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="bs-st" class="article well clearfix mybody2">
+                    <div id="bs-st" class="article well clearfix mybody2" aos="flip-up" >
                         <div class="data-article">
                             <div class="title-article">
                                 <h1>
@@ -246,7 +248,7 @@
                             </table>
                         </div>
                     </div>
-                    <div id="bs-ph" class="article well clearfix mybody2">
+                    <div id="bs-ph" class="article well clearfix mybody2" aos="flip-up">
                         <div class="data-article">
                             <div class="title-article">
                                 <h1>
@@ -282,5 +284,14 @@
     </div>
 </div>
 <div class="footer"></div>
-</body>
-</html>
+<div class="toTop">
+    <i class="fa fa-angle-up"></i>
+</div>
+<script src="dist/aos.js"></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+</script>
+
